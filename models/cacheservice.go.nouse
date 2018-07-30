@@ -1,0 +1,22 @@
+package models
+
+import (
+	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/cache"
+	_ "github.com/astaxie/beego/cache/redis"
+)
+
+type CacheService struct {
+	cacheHandler *redis
+}
+
+var cacheserviceInstance *CacheService
+
+//单例
+func CacheServiceInstance() *CacheService {
+
+	if cacheserviceInstance == nil {
+		cacheserviceInstance = &CacheService{}
+	}
+	return cacheserviceInstance
+}

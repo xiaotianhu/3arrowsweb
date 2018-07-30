@@ -1,0 +1,11 @@
+package: 3arrows_web
+import:
+- package: github.com/astaxie/beego
+  version: v1.9.2
+- package: github.com/go-sql-driver/mysql
+
+testImport:
+- package: github.com/smartystreets/goconvey
+  version: 1.6.3
+  subpackages:
+  - convey
